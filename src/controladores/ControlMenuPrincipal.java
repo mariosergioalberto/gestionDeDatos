@@ -2,6 +2,7 @@ package controladores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import persistencia.Conector;
 import vistas.ActualizarPrecios;
 import vistas.MenuPrincipal;
 
@@ -23,11 +24,13 @@ public class ControlMenuPrincipal implements ActionListener {
     private ControlFrameConsultarVentas controlFrameConsultarVentas;
     private ControlFrameMarcas controlFrameMarcas;
     private ControlFrameRubros controlFrameRubros;
+    private Conector con;
 
-    public ControlMenuPrincipal() {
+    public ControlMenuPrincipal(Conector con) {
         this.menuPrincipal = new MenuPrincipal();
         this.menuPrincipal.ejecutar();
         menuPrincipal.setControlador(this);
+        this.con = con;
     }
 
     @Override

@@ -3,7 +3,7 @@ package persistencia;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class MySqlConexion extends Conexion {
+public class MySqlConexion extends Conector {
 
     public MySqlConexion() {
     }

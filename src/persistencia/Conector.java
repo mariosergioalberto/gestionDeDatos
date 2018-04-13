@@ -4,8 +4,15 @@ import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public abstract class Conexion {
+public abstract class Conector {
 
+//    private String servidor = "sql10.freesqldatabase.com";
+//    private String baseDeDatos = "sql10232132";
+//    private String usuario = "sql10232132";
+//    private String clave = "mX55U8xPTR";
+//    private Connection conexion;
+//    private Statement sentencia;
+    
     private String servidor = "localhost";
     private String baseDeDatos = "systoredb";
     private String usuario = "root";
@@ -13,10 +20,10 @@ public abstract class Conexion {
     private Connection conexion;
     private Statement sentencia;
 
-    public Conexion() {
+    public Conector() {
     }
 
-    public Conexion(String servidor, String basededatos, String usuario, String clave) {
+    public Conector(String servidor, String basededatos, String usuario, String clave) {
         this.servidor = servidor;
         this.baseDeDatos = basededatos;
         this.usuario = usuario;

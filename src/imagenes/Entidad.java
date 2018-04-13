@@ -2,9 +2,9 @@ package persistencia;
 
 public abstract class Entidad {
     private String nombre;
-    private Conexion conexion;
+    private Conector conexion;
 
-    public Entidad(String nombre, Conexion conxion) {
+    public Entidad(String nombre, Conector conxion) {
         this.nombre = nombre;
         this.conexion = conxion;
     }
@@ -14,11 +14,11 @@ public abstract class Entidad {
     public abstract void modificar();
     public abstract boolean buscar();
 
-    public Conexion getConexion() {
+    public Conector getConexion() {
         return conexion;
     }
 
-    public void setConexion(Conexion conexion) {
+    public void setConexion(Conector conexion) {
         this.conexion = conexion;
     }
 }

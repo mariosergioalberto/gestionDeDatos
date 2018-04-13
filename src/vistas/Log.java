@@ -32,8 +32,8 @@ public class Log extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        tfUsuario = new javax.swing.JTextField();
-        tfPassword = new javax.swing.JPasswordField();
+        txtUsuario = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SYSTORE");
@@ -60,8 +60,8 @@ public class Log extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                            .addComponent(tfPassword)))
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                            .addComponent(txtPassword)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
@@ -74,11 +74,11 @@ public class Log extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(tfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEntrar)
@@ -94,7 +94,20 @@ public class Log extends javax.swing.JFrame {
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField tfPassword;
-    private javax.swing.JTextField tfUsuario;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public String getTxtPassword() {
+        return txtPassword.getText();
+    }
+    
+    public String getTxtUsuario() {
+        return txtUsuario.getText();
+    }
+    
+    public void limpiar() {
+        txtUsuario.setText("");
+        txtPassword.setText("");
+    }
 }
