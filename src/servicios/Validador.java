@@ -6,11 +6,14 @@ import java.sql.Statement;
 import persistencia.Conector;
 
 public class Validador {
+    
+    private Conector con;
 
-    public Validador() {
+    public Validador(Conector con) {
+        this.con = con;
     }
 
-    public boolean validarUsuario(String user, String pass, Conector con) throws Exception {
+    public boolean validarUsuario(String user, String pass) throws Exception {
         try {
             String url = "SELECT * FROM usuario WHERE user='" + user + "'";
             Statement consulta = con.getConexion().createStatement();

@@ -2,6 +2,7 @@ package controladores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import persistencia.Conector;
 import vistas.ActualizarPrecios;
 import vistas.MenuPrincipal;
@@ -37,7 +38,11 @@ public class ControlMenuPrincipal implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         /*BOTONES*/
         if (e.getActionCommand().equals(menuPrincipal.BTN_ARTICULOS)) {
-            controlMenuArticulos = new ControlMenuArticulos(menuPrincipal);
+            try {
+                controlMenuArticulos = new ControlMenuArticulos(menuPrincipal);
+            } catch (SQLException ex) {
+            } catch (ClassNotFoundException ex) {
+            }
         }
         if (e.getActionCommand().equals(menuPrincipal.BTN_COMPRAS)) {
             controlFrameIngresoDeMercaderia = new ControlFrameIngresoDeMercaderia(menuPrincipal);
@@ -45,16 +50,20 @@ public class ControlMenuPrincipal implements ActionListener {
         if (e.getActionCommand().equals(menuPrincipal.BTN_VENTAS)) {
             controlFrameFactura = new ControlFrameFactura(menuPrincipal);
         }
-        if(e.getActionCommand().equals(menuPrincipal.BTN_EMPLEADOS)) {
+        if (e.getActionCommand().equals(menuPrincipal.BTN_EMPLEADOS)) {
             controlMenuEmpleados = new ControlMenuEmpleados(menuPrincipal);
         }
-        if(e.getActionCommand().equals(menuPrincipal.BTN_LIQUIDACION)) {
+        if (e.getActionCommand().equals(menuPrincipal.BTN_LIQUIDACION)) {
             System.out.println("BOTON LIQUIDACION");
         }
 
         /*MENUES*/
         if (e.getActionCommand().equals(menuPrincipal.MENU_ABM_ARTICULO)) {
-            controlMenuArticulos = new ControlMenuArticulos(menuPrincipal);
+            try {
+                controlMenuArticulos = new ControlMenuArticulos(menuPrincipal);
+            } catch (SQLException ex) {
+            } catch (ClassNotFoundException ex) {
+            }
         }
         if (e.getActionCommand().equals(menuPrincipal.MENU_ACTUALIZAR_PRECIO_ARTICULO)) {
             controlActualizarPrecios = new ControlActualizarPrecios(menuPrincipal);
@@ -90,10 +99,18 @@ public class ControlMenuPrincipal implements ActionListener {
             controlFrameConsultarVentas = new ControlFrameConsultarVentas(menuPrincipal);
         }
         if (e.getActionCommand().equals(menuPrincipal.MENU_ABM_MARCAS)) {
-            controlFrameMarcas = new ControlFrameMarcas(menuPrincipal);
+            try {
+                controlFrameMarcas = new ControlFrameMarcas(menuPrincipal);
+            } catch (SQLException ex) {
+            } catch (ClassNotFoundException ex) {
+            }
         }
         if (e.getActionCommand().equals(menuPrincipal.MENU_ABM_RUBROS)) {
-            controlFrameRubros = new ControlFrameRubros(menuPrincipal);
+            try {
+                controlFrameRubros = new ControlFrameRubros(menuPrincipal);
+            } catch (SQLException ex) {
+            } catch (ClassNotFoundException ex) {
+            }
         }
         if (e.getActionCommand().equals(menuPrincipal.MENU_SALIR)) {
             System.exit(0);

@@ -1,6 +1,7 @@
 package vistas;
 
 import controladores.ControlMenuArticulos;
+import javax.swing.JTable;
 
 public class MenuArticulos extends java.awt.Dialog {
 
@@ -42,7 +43,7 @@ public class MenuArticulos extends java.awt.Dialog {
         btnOrdenar = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaArticulos = new javax.swing.JTable();
         btnSalir = new javax.swing.JButton();
 
         setResizable(false);
@@ -64,18 +65,18 @@ public class MenuArticulos extends java.awt.Dialog {
 
         btnNuevo.setText("Nuevo");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaArticulos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Codigo", "Descripción", "Marca", "Rubro", "Precio Venta", "Precio Compra", "Stock", "Stock Minimo", "Alicuota IVA", "F. Compra"
+                "Codigo", "Descripción", "Marca", "Rubro", "Precio Venta", "Precio Compra", "Stock", "Stock Minimo"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaArticulos);
 
         btnSalir.setText("Salir");
 
@@ -136,6 +137,14 @@ public class MenuArticulos extends java.awt.Dialog {
     private javax.swing.JButton btnOrdenar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaArticulos;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getTablaArticulos() {
+        return tablaArticulos;
+    }
+
+    public void setTablaArticulos(JTable tablaArticulos) {
+        this.tablaArticulos = tablaArticulos;
+    }
 }

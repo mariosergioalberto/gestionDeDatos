@@ -1,6 +1,7 @@
 package vistas;
 
 import controladores.ControlFrameRubros;
+import javax.swing.JTable;
 
 public class FrameRubros extends javax.swing.JDialog {
 
@@ -41,15 +42,16 @@ public class FrameRubros extends javax.swing.JDialog {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        tablaMarcas = new javax.swing.JTable();
+        tablaRubros = new javax.swing.JTable();
         btnSalir = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Actualizacion de la tabla rubros");
 
-        tablaMarcas.setModel(new javax.swing.table.DefaultTableModel(
+        tablaRubros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null}
             },
@@ -57,13 +59,13 @@ public class FrameRubros extends javax.swing.JDialog {
                 "Rubro"
             }
         ));
-        jScrollPane2.setViewportView(tablaMarcas);
+        jScrollPane2.setViewportView(tablaRubros);
 
-        btnSalir.setText("Salir");
+        btnSalir.setText("Cancelar");
 
-        btnNuevo.setText("A");
+        btnNuevo.setText("Agregar");
 
-        btnEliminar.setText("E");
+        btnEliminar.setText("Eliminar");
 
         jLabel1.setText("Tabla de rubros");
 
@@ -74,13 +76,12 @@ public class FrameRubros extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnNuevo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnEliminar)))
+                        .addComponent(btnEliminar))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(28, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -113,6 +114,14 @@ public class FrameRubros extends javax.swing.JDialog {
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tablaMarcas;
+    private javax.swing.JTable tablaRubros;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getTablaRubros() {
+        return tablaRubros;
+    }
+
+    public void setTablaRubros(JTable tablaRubros) {
+        this.tablaRubros = tablaRubros;
+    }
 }

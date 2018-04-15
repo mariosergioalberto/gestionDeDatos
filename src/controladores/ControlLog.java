@@ -24,16 +24,15 @@ public class ControlLog implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals(log.BTN_ENTRAR)) {
-            Validador v = new Validador();
+            Validador v = new Validador(con);
             boolean b = false;
             try {
-                b = v.validarUsuario(log.getTxtUsuario(), log.getTxtPassword(), con);
+                b = v.validarUsuario(log.getTxtUsuario(), log.getTxtPassword());
             } catch (Exception ex) {
                 Logger.getLogger(ControlLog.class.getName()).log(Level.SEVERE, null, ex);
             }
             System.out.println(b);
             if (b == true) {
-                JOptionPane.showMessageDialog(null, "Usuario aceptado.");
                 log.dispose();
                 ControlMenuPrincipal controlMP = new ControlMenuPrincipal(this.con);
             } else {

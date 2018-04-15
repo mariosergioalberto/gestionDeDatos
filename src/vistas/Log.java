@@ -47,6 +47,10 @@ public class Log extends javax.swing.JFrame {
 
         btnSalir.setText("Salir");
 
+        txtUsuario.setText("javier");
+
+        txtPassword.setText("1234");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
