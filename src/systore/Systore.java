@@ -20,7 +20,7 @@ public class Systore {
         }
         
         JOptionPane.showMessageDialog(null, "Prueba de mi repositorio", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
-       
+       // Nuevo
     }
 
  
