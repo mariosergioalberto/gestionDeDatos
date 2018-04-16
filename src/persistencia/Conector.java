@@ -10,7 +10,7 @@ public abstract class Conector {
 //    private String baseDeDatos = "sql10232132";
 //    private String usuario = "sql10232132";
 //    private String clave = "mX55U8xPTR";
-    
+    //Comentario
     private String servidor = "localhost";
     private String baseDeDatos = "systoredb";
     private String usuario = "root";
