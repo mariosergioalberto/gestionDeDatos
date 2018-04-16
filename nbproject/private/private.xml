@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
         <file>
-            <url>src/persistencia/DBAuxiliares.java</url>
-            <bookmark id="1">
-                <name/>
-                <line>46</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
             <url>src/persistencia/DBArticulos.java</url>
             <bookmark id="2">
                 <name/>
@@ -17,10 +9,19 @@
                 <key/>
             </bookmark>
         </file>
+        <file>
+            <url>src/persistencia/DBAuxiliares.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>46</line>
+                <key/>
+            </bookmark>
+        </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Sherlock/Documents/NetBeansProjects/Systore/src/controladores/ControlFrameMarcas.java</file>
+            <file>file:/C:/Users/Sergio/Documents/NetBeansProjects/gestionDeDatos/src/vistas/FrameNuevoEmpleado.java</file>
+            <file>file:/C:/Users/Sergio/Documents/NetBeansProjects/gestionDeDatos/src/vistas/FrameNuevoGrupoFamiliar.java</file>
         </group>
     </open-files>
 </project-private>
