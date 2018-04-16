@@ -18,7 +18,10 @@ public class Systore {
         } catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, "Error en el Driver O Servidor 2", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
         }
+        
+        JOptionPane.showMessageDialog(null, "Prueba de mi repositorio", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+       
     }
 
-  
+ 
 }
